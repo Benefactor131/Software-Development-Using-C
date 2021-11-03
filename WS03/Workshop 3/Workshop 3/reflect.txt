@@ -1,0 +1,11 @@
+Student Name: Bair Suimaliev
+Student ID: 159350198
+Student Email: bsuimaliev@myseneca.ca
+
+In the workshop number which was the toughest for me, I learned a bit more about templates and how to use them as well as their syntax for implementation. In addition, I learned how to a template class variable, how the setting of a template class variable or member function to a particular type or processing of it is done, how to instantiate a class template, make derived template classes from different templated classes.
+
+This workshop made me work with the templates which give me hard time writing code since the syntax for templates is big and confusing. Therefore, this workshop was a little bit of a struggle for me, however, I managed to do everything in a proper way as I think with the help of course notes and class lectures recordings.
+
+The reason for including all the implementation in a header file was that if an implementation of all functions were outside of a header file, it would not be accessible by the compiler, and consequently would not be instantiated.
+
+Also, “=initial” in the PairSummable(const K& key, const V& value = initial) function means the default value for the “value” variable is the value of “initial”.

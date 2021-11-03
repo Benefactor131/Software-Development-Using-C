@@ -1,0 +1,6 @@
+Student Name: Bair Suimaliev
+Student ID: 159350198
+Student Email: bsuimaliev@myseneca.ca
+
+During workshop 4 I have been designing and coding composition and aggregation relationships between classes. Basically, the composition is a relationship where one class cannot exist without another class, whereas in the aggregation it is less dependent on the other class. In this workshop, a Restaurant class and a Reservation class have a composition relationship, while the relationship between a ConfirmationSender class and a Reservation is aggregation. From a coding perspective, I used the pointer version to an object in the composition relationship rather than a subobject. Furthermore, the composition relationship implies direct creation and deletion of the objects it is dependent on. However, in the aggregation relationship, it is not done directly from an aggregator type. Also, the aggregator is using a constant variable of an aggregatee type, since it is not modifying it.
+Also, I have practiced implementing string-type functions. This workshop required me to declare and define a trim function of a string type for tokenizing strings and removing redundant spaces from the strings.
