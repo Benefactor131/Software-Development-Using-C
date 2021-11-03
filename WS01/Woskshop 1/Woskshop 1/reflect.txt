@@ -1,0 +1,11 @@
+Bair Suimaliev
+bsuimaliev@myseneca.ca
+159350198
+
+The first workshop was a refreshment and practice for me. I had to spend some time remembering some of C++ concepts from the previous term, like the rule of three, or overloading function operators.
+
+In addition, this workshop introduced the extern keyword to me, and how it works. Basically, it instructs the compiler that a variable is defined in another scope, so the linker can find the appropriate scope of definition.
+
+Moreover, I learned that static keyword will tell the compiler to save a local variable throughout the program execution.
+
+The most difficult part of the workshop from my perspective was implementing the display function, in particular the formulas for calculating the amount of hours, minutes and remaining seconds from the common number of seconds. For solving this problem I used this site as a reference: https://stackoverflow.com/questions/6312993/javascript-seconds-to-time-string-with-format-hhmmss

@@ -1,0 +1,78 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include "event.h"
+#include <iostream>
+#include <iomanip>
+#include <cstring>
+
+using namespace std;
+
+unsigned int g_sysClock{};
+
+namespace sdds
+{
+	Event::Event() :m_sec(g_sysClock)
+	{
+		//m_sec = g_sysClock; optional if thge m_sec {} wasn't initiated as : initiation default
+	}
+
+	void Event::setStr(const char* str)
+	{
+		if (str && str[0] != '\0')
+		{
+			if (m_string) delete[] m_string;
+			m_string = new char[strlen(str) + 1];
+			strcpy(m_string, str);
+		}
+	}
+	//copy constructor copies an existing object to a new object or non-existing object 
+	//Event::Event(const Event& E):m_sec(E.m_sec)
+	//{
+	//	setStr(E.m_string);
+	//}
+	Event::Event(const Event& E) {
+		m_sec = E.m_sec;
+		setStr(E.m_string);//name of something ,some event name
+	}
+
+	Event::~Event()
+	{
+		if (m_string != nullptr)
+			delete[] m_string;
+	}
+
+	Event& Event::operator=(const Event& E)  //assignment operator assigns currentobject to another currentobject 
+	{
+		m_sec = E.m_sec;// take one to the other
+		setStr(E.m_string);
+		return this;// turns a pointer to a reference,return a reference of our object so that we can do chainnin 
+	}
+
+	void Event::display()//display the variables displayed in teh event class
+	{
+		static int counter = 1;
+		if (m_string != nullptr)//check if m_string is allocated 
+		{
+			//calculate hours 
+			int hours = m_sec / 3600, minutes = (m_sec % 3600) / 60, seconds = (m_sec % 3600) % 60;
+			cout << setw(2) << setfill(' ') << counter++ << ". " << setw(2) << setfill('0') << hours << ":" << setw(2) << minutes << ":" << setw(2) << seconds << " => " << m_string << endl;
+		}
+		else cout << setw(2) << setfill(' ') << counter++ << ". | No Event |" << endl;
+	}
+
+	void Event::set(const char* str)
+	{
+		if (str && str[0] != '\0')
+		{
+			Event newEvent;
+			m_sec = newEvent.m_sec;
+			//m_sec = g_sysClock;
+			setStr(str);
+		}
+		else
+		{
+			delete[] m_string;
+			m_string = nullptr;
+			m_sec = 0;
+		}
+	}
+}

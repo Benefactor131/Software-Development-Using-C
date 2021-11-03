@@ -1,0 +1,10 @@
+Student Name: Bair Suimaliev
+Student ID: 159350198
+Seneca email: bsuimaliev@myseneca.ca
+
+The second workshop of this course taught me some new C++ concepts. The entirely new library for me was chrono. I have never worked with this library before. In this workshop we used mainly chrono::duration and chrono::timepoint types. Basically, as I understood these two types represent class templates that have several class members. However, these types are used in combination with chrono::steady_clock class as they are the members of this class. This class is best with calculating time intervals. 
+
+In addition, I used three more functions from the chrono library which were new to me. First function I applied in this workshop was chrono::steady_clock::now() which retrieved current time. Second function was chrono::duration_cast which converts duration to another tick interval, which in my case was chrono::nanoseconds type. And the last one was count() function that returned reps, number of ticks.
+
+
+The most difficult part for me was making the extraction operator function for printing out execution times work. The problem for implementing this function was that I was not copying the name of the event in the addEvent function, which did not allow my extraction operator function to work properly, since it had no records of the events’ names. I managed to solve this problem by looking through all the lines of code I wrote myself, and spending some additional for understanding the program again.
